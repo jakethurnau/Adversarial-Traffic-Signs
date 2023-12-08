@@ -40,7 +40,7 @@ saver = tf.train.Saver(restore_vars)
 saver.restore(sess, os.path.join(data_dir, 'inception_v3.ckpt'))
 
 image_string = input("\nPlease choose an image to add noise to: \n")
-img = Image.open("testing_signs/" + image_string).convert("RGB")
+img = Image.open("unperturbed_signs/" + image_string).convert("RGB")
 #img = ImageOps.expand(img,border=150,fill='white')
 print(img.size)
 #img.resize((299,299))
